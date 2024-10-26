@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="index.css">
     <title>My HomePage</title>
+    <style>
+        .class ,#id, .tag, .contextual{
+    font-weight: bold;
+}
+    </style>
 </head>
 <body>
     <h1 id="heading">LifeNote</h1>
@@ -17,6 +23,7 @@
     <h3 id="index">Index</h3>
     <ul>
         <li><a href="#heading">LifeNote</a></li>
+        <li><a href="#0">0<sup>th</sup> class</a>(Web page)</li>
         <li><a href="#1">1<sup>st</sup> class</a>(Tags)</li>
         <li><a href="#2">2<sup>nd</sup> class</a>(Lists)</li>
         <li><a href="#3">3<sup>rd</sup> class</a>(Unordered List)</li>
@@ -25,8 +32,55 @@
         <li><a href="#6">6<sup>th</sup> class</a>(Linking Page using relative or absolute path)</li>
         <li><a href="#7">7<sup>th</sup> class</a>(URL)</li>
         <li><a href="#8">8<sup>th</sup> class</a>(Elements)</li>
+        <li><a href="#9">9<sup>th</sup> class</a>(Tag Practice)</li>
+        <li><a href="#10">10<sup>th</sup> class</a>(font style)</li>
+        <li><a href="#11">11<sup>th</sup> class</a>(CSS)</li>
+        <li><a href="#12">12<sup>th</sup> class</a>(selector)</li>
+        <li><a href="#13">13<sup>th</sup> class</a>(Unit of measurement)</li>
 
     </ul>
+    <h3>Assignment 2</h3>
+    <ul>
+        <li><a href="Assignment 2/Question1.html">Assignment Question 1 </a></li>
+        <li><a href="Assignment 2/Question2.html">Assignment Question 2</a></li>
+    </ul>
+    <h3>Assignment 3</h3>
+    <ul>
+        <li><a href="Assignment 3/Question 2.html">Assignment Question 2</a></li>
+        <li><a href="Assignment 3/Question3.html">Assignment Question 3</a></li>
+    </ul>
+    <h3>Assignment 4</h3>
+    <ul>
+        <li><a href="Assignment/Question 1.html" target="_blank">Assignment Question 1 </a></li>
+        <li><a href="Assignment/Question 2.html" target="_blank">Assignment Question 2</a></li>
+    </ul>
+    <hr>
+    <pre id="0">10/09/24</pre>
+        <ul>
+            <dl>
+                <dt><li><a href="https://www.geeksforgeeks.org/web-pages/" target="_blank">Anatomy of web-pages</a></li></dt>
+                <dd>a complete website is a collection of individual webPages which are linked to each other, these individual webpages are  also known as web Document</dd>
+                <br>
+                <dt><li><a href="https://www.geeksforgeeks.org/wireframing/" target="_blank">Wire_Framing</a></li></dt>
+                <dd>WireFrames provide a rough outline of what the website will look like when it is completed forming</dd>
+                <br>
+                <dt><li><a href="https://en.wikipedia.org/wiki/List_of_text_editors" target="_blank">text editor</a></li></dt>
+                <dd>HTML files are palin text files and should be edited using tool thatworks with plain text files</dd>
+                <br>
+                <dt><li><a href="https://en.wikipedia.org/wiki/Web_content#:~:text=Web%20content%20is%20the%20text,items%20placed%20within%20web%20pages." target="_blank">Contain of web-pages</a></li></dt>
+                <dd>contain in general term refers to any text graphics form or any other media information provided in the webpages</dd>
+                <br>
+                <dt><li><a href="https://en.wikipedia.org/wiki/Web_hosting_service" target="_blank">Web hosting</a></li></dt>
+                <dd> the simpliest way to publish your website is to get a web hstig account that enables you to uplaod your files and the web contents to the server that is visible on the web.</dd>
+                <br>
+                <dt><li><a href="https://www.geeksforgeeks.org/html-complete-guide/" target="_blank">HTML</a></li></dt>
+                <dd>HTML describe the structure of the web webPages</dd>
+                <br>
+                <dt><li><a href="https://www.geeksforgeeks.org/html-elements/" target="_blank">HTML elements</a></li></dt>
+                <dd>The openning tag along with the closing tag composes the HTML elements</dd>
+            </dl>
+        </ul>
+        <a href="#index">Back to index</a>
     <hr>
     <pre id="1">13/09/2024</pre>
     <ol reversed>
@@ -54,7 +108,7 @@
     <a href="#index">Back to index</a>
     <hr>
     <pre id="2">16/09/2024</pre>
-    <p> today we make  <a href="file:///home/student/2341018060/mona lisa.html" target="_blank">Mona Lisa</a></a></p>
+    <p> today we make  <a href="mona lisa.html" target="_blank">Mona Lisa</a></a></p>
     <h1><u>LISTS</u></h1>
     <p> lists are general purpose container for collection of things
         There are 3 variations of List:-
@@ -66,14 +120,13 @@
         <dd>These list are not numbered and bydefault are presented with bullets for each element</dd>
         <li>Defination <a href="https://www.w3schools.com/tags/tag_dl.asp"> List</a></li>
         <dd>This list have a pair of label with some description</dd>
-    </ol>
-    <p><a href="OrderedList.html" target="_blank"> Ordered list </a>Practice quesion</p>
+    </ol> 
+    <p><a href="Tags Practice/OrderedList.html" target="_blank"> Ordered list </a>Practice quesion</p>
     <a href="#index">Back to index</a>
     <hr>
     <pre id="3">18/09/2024</pre>
     <h1>Unordered list</h1>
-    <p>Unordered list as often refered as bulleted list. the tags that are used to create an Unorderedlist is ul tag and the individual items are listed using the li tag. 
-        they are 4 types:-</p>
+    <p>Unordered list as often refered as bulleted list. the tags that are used to create an Unorderedlist is ul tag and the individual items are listed using the li tag. they are 4 types:-</p>
     <ul style="list-style-position: inside;">
         <li type="circle"> circle</li>
         <li type="square">square</li>
@@ -101,17 +154,17 @@
         <dt>dd tag</dt>
         <dd>the corresponding defination of th term is crated by using dt tag</dd>
     </dl>
-    <p><a href="Unordered List.html" target="_blank">Unordered List</a> Practice question</p>
-    <p><a href="Defination List.html" target="_blank">Defination List</a> Practice question</p>
+    <p><a href="Tags Practice/Unordered List.html" target="_blank">Unordered List</a> Practice question</p>
+    <p><a href="Tags Practice/Defination List.html" target="_blank">Defination List</a> Practice question</p>
     <a href="#index">Back to index</a>
     <hr>
     <pre id="4">20/09/2024</pre>
-    <a href="List_Practice/List Practice1.html" target="_blank">Practice 1 (List)</a><br>
-    <a href="List_Practice/List Practice2.html" target="_blank">Practice 2 (List)</a><br>
-    <a href="List_Practice/List Practice3.html" target="_blank">Practice 3 (Jamshedpur)</a><br>
-    <a href="List_Practice/List Practice4.html" target="_blank">Practice 4 (chemical)</a><br>
-    <a href="List_Practice/List Practice5.html" target="_blank">Practice 5 (List)</a><br>
-    <a href="List_Practice/List Practice6.html" target="_blank">Practice 6 (tags)</a>
+    <a href="list practice/List Practice1.html" target="_blank">Practice 1 (List)</a><br>
+    <a href="list practice/List Practice2.html" target="_blank">Practice 2 (List)</a><br>
+    <a href="list practice/List Practice3.html" target="_blank">Practice 3 (Jamshedpur)</a><br>
+    <a href="list practice/List Practice4.html" target="_blank">Practice 4 (chemical)</a><br>
+    <a href="list practice/List Practice5.html" target="_blank">Practice 5 (List)</a><br>
+    <a href="list practice/List Practice6.html" target="_blank">Practice 6 (tags)</a>
     <br>
     <a href="#index">Back to index</a>
     <hr>
@@ -123,9 +176,9 @@
         <li>The text that wll serve as the clickable link</li>
     </ul>
     <p>To create a link in HTML page we use a (anchor) tag. The Attributes generally used for a tag are href, target & title</p>
-    <a href="7Wonders/Seven Wonder.html" target="_blank"> Pratice question (seven wonders of the world)</a>
+    <a href="wonder world/Seven Wonder.html" target="_blank"> Pratice question (seven wonders of the world)</a>
     <br>
-    <a href="5Places/5 places.html" target="_blank">Pactice question (five places)</a>
+    <a href="Five Places/Main.html" target="_blank">Pactice question (five places)</a>
     <br><a href="#index">Back to index</a>
     <hr>
     <pre id="6">25/09/2024</pre>
@@ -176,7 +229,7 @@
     <p><b>File URL</b> : The File URL are used to refer the files which are int he local disk eg: <pre>file:///dir1/dir2/file</pre></p>
     <p><b>Mailto URL</b> : Mailto URL are used to send e-mails. If the Browser supports the mail to URL then when we Click on a link that contian an email, the browser will open a new out going email in your defaut email application eg: <pre>mailto: xyz@gmail.com?cc=abc@gmail.com&subject=hello&body=text</pre>
     </p>
-    <a href="emoji/main.html" target="_blank">URL practice</a>
+    <a href="emoji/main.html" target="_blank">URL practice</a>(emoji Question)
     <br><a href="#index">Back to index</a>
     <hr>
     <pre id="8">30/09/2024</pre>
@@ -218,10 +271,122 @@
     </ol>
     <h3>Pre formated text</h3>
     <p>most of the text a HTML file is formated based on a HTML tag that are used t markup the text. The 1 execption to this rule is the pre formated text tag that is pre tag</p>
-    <p>This use of pre tag is in this <a href="pre tag.html" target="_blank">Practice</a></p>
-    
+    <p>This use of pre tag is in this <a href="Tags Practice/pre tag.html" target="_blank">Practice</a></p>
     <br><a href="#index">Back to index</a>
-    <a href="Assignment 2/Question11.html">Assignment Question11</a>
-    <a href="Assignment 2/Question12.html">Assignment question12</a>
+    <hr>
+    <pre id="9">04/10/2024</pre>
+    <ul>
+    <li>hr tag <a href="Tags Practice/hr tag.html" target="_blank">Practice Question</a><br></li>
+    <li>address tag <a href="Tags Practice/address tag.html" target="_blank">Practice Question</a><br></li>
+    <li>cite tag <a href="Tags Practice/cite.html" target="_blank">Practic Question</a></li>
+    </ul>
+    <br><a href="#index">Back to index</a>
+    <hr>
+    <pre id="10">14/10/2024 </pre>
+
+    <ul>
+        <li><a href="bookstore.html" target="_blank">Bookstore</a> Practice question</li>
+        <li><a href="font_style.html" target="_blank">Font style</a> Practice question</li>
+        <li><a href="special_character.html" target="_blank">spcial character</a> Practice question</li>
+    </ul>
+    <br><a href="#index">Back to index</a>
+    <hr>
+    <pre id="11">16/10/2024</pre>
+    <h1>CSS File</h1>
+    <ol>
+        <li><b>Inline CSS </b></li><dd>The Inline CSS is written using the style attribute inside the coreesponding tag. The Inline CSS has the higest priority internal or page level CSS.</dd>
+        <li><b>Internal / Page_level CSS</b> </li><dd>The internal CSS written using the style tag inside the head section. The type atrribute indicates the type of style sheet that is being used.The body of the style sheet consist of a series of rules.</dd>
+        <li><b>External / Sitewide CSS </b></li><dd>In this type os CSS all the styling infomation are writen in a separate file and it is linked from the html file. The External CSS file is save with an extention .css. The CSS file contains the body of the style tag</dd>
+    </ol>
+    <a href="css.html" target="_blank">css</a> Practice 
+    <br>
+    <h2>Selector</h2>
+    <p>Seletor refer to the eement name to which the property will be implemented</p>
+    <ol>
+        <li class="tag">Tags</li><dd>Any tag can serve as a css selector and the rules associated with that selector will be applied to al the instance of the perticular tag on the page. If the multiple tags need to be given the same property then each of the tag can be written together seperate by the (,) followed by the rule.</dd>
+        <li class="contextual">Contextual</li><dd>These selector are used to apply style to the elements only when they ae nested within other elements.</dd>
+        <li class="class">class</li><dd>It is used when we need to provide property to the tags using their class_name. A class selector is written starting with a (.) followed by the class_name.</dd>
+        <li id="id">ID </li><dd>The id attribute is used for assigning identifier to uniqe elements. ID selector is writtn strating with the # symbol followed by id_name.</dd>
+    </ol>
+    <a href="course.html">practice</a>
+    <br><a href="#index">Back to index</a>
+    <hr>
+    <pre id="12">18/10/2024</pre>
+    <ol>
+        <li>Universal (*)</li>
+        <div>*{property:value;}</div><br>
+        <li>Pseduo-code (:) </li>
+        <div>a:hover{ }</div><br>
+        <li>Pseduo-element (::)</li>
+        <div>p::after{  }</div><br>
+        <li>child (>)</li>
+        <div>h1>p{  } -> immediate child tag under h1</div>
+        <div>h1.p{  } -> all the incendent will get the property</div><br>
+        <li>attribute ([])</li>
+        <div>a[target]{ } -> not in all the anchor tag</div><br>
+        <li>Adjacent Sibling (+)</li><div>h1+p{ }</div><br>
+        <li>General sibling (~)</li>
+        <div>h1~p{  }</div>
+    </ol>
+    <ul><p><u>Practice questions</u></p>
+        <li><a href="Sector/selectors.html" target="_blank">Selector</a></li>
+        <li><a href="Sector/selectors1.html" target="_blank">Selector1</a></li>
+        <li><a href="Sector/selectors3.html" target="_blank">Selector2</a></li>
+        <li><a href="Sector/selectors4.html" target="_blank">Selector3</a></li>
+        <li><a href="Sector/selectors5.html" target="_blank">Selector4</a></li>
+        <li><a href="Sector/selectors6.html" target="_blank">Selector5</a></li>
+        <li><a href="Sector/selectors7.html" target="_blank">Selector6</a></li>
+    </ul>
+
+    <br><a href="#index">Back to index</a>
+    <hr>
+    <pre id="13">23/10/2024</pre>
+    <h1>Unit of Measurment</h1>
+    <p>In CSS There are 4 ypes of units in measure</p>
+    <ol>
+        <li>lenght-unit     <a href="lenght-unit.html" target="_blank">lenght-unit</a>
+            <ol style="list-style-type: lower-roman;">
+                <li>Absolute Unit</li>- It theoritacly corresponds for unit of measure in the real world. For eg.Inch, centimeter, milimeter, etc.
+                <li>Relative Unit</li>- These are based on some arbitarly unit of measure. For eg. em (height of element), px (pixels relative to the device screen), etc
+            </ol>
+        </li>
+        <li>percentage-unit</li>
+        <li>Color-unit     <a href="Color-unit.html" target="_blank">Color-unit</a></li>
+        <li>URL <a href="URL.html" target="_blank">URL </a></li>
+    </ol>
+    <a href="border.html" target="_blank">boreder</a>
+    <a href="margin.html" target="_blank">margin</a>
+    <a href="width.html" target="_blank">width</a>
+    <br><a href="#index">Back to index</a>
+    <hr>
+    <pre>26/10/2024</pre>
+    <h1>Box Model</h1>
+    <p>Int the Box Model there are 2 types of Contain box</p>
+    <ol>
+        <li><b>Bock type (block level element)</b> - Block element are bydefault as wide as the container you place them and you can modify their height and you can modify their height and weight using CSS. Block elements are also precided and followed by line bricks</li>
+        <li><b>Inline Elements</b> - Inline element are only as they need to be displayed along with their margin border, padding, etc.</li>
+    </ol>
+    <p>Each elemen i bydefault either a block element or an inline element, however CSS provides a display property to make  change in the behaviour.</p>
+    <p>The value that can be provided for display property are:-</p>
+    <ol>
+        <li>Block</li>
+        <li>Inline</li>
+        <li>inline-block</li>
+        <li>none</li>
+    </ol>
+    <h2>Maximum and Minimum</h2>
+    <p>It is possibl to set maximum and minimum difference in the sze of users browsering window.</p>
+    <p>The property that can be use are max-width, min-width, max-height, min -height</p>
+    <h2>Overflow Property</h2>
+    <p>Sometimes it so happens that the text goes beyond the container box. CSS has an overflow property to tell the browsers what t do with the ovr flowing text.</p>
+    <p>The value that can be used for the overflow property are visible , hidden, scroll and auto.</p>
+    <h2>Float property</h2>
+    <p>Normally the block level elements slow down the page from top to buttom if you want to alter the normal flow of the page, you can use the float property. The float propperty is used to indicate that an eement should be placed as far as posiible to the left or right on  apage and any oter conatin should be raped around it.</p>
+    <p>To disable the float property we can use the clear option for the following tags after the tag, which have implemented the float property the values for the clear properrty are left, right, none and both.</p>
+    <a href="Nested elemnets.html" target="_blank">Nested Elements</a>
+    <a href="navigation.html" target="_blank">navigation </a>
+    <a href="max-width.html" target="_blank">Max-width</a>
+    <a href="float.html" target="_blank">float</a>
+    <br><a href="#index">Back to index</a>
 </body>
 </html>
