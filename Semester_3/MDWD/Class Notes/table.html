@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>table</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            
+        }
+        th, td{
+            padding: 10px;
+        }
+            #tr1{
+                th{
+                    border: 2px red dashed;
+                }
+            }
+            #tr2{
+                td{
+                    border: 4px blue dotted;
+                };
+            }
+            #tr3{
+                td{
+                    border: 1px green solid;
+                }
+            }
+            #tr4{
+                td{
+                    border-color: cyan;
+                }
+            }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>vital statistics</caption>
+        <tr>
+            <th>name</th>
+            <th>weight</th>
+            <th>height</th>
+            <th>eye-color</th>
+        </tr>
+        <tr>
+            <td>eren</td>
+            <td>70kg</td>
+            <td>180cm</td>
+            <td>green</td>
+        </tr>
+    </table>
+    <table>
+        <caption>
+            <details>
+                <summary>vital statistics</summary>
+                <p>the table gives the information about a person detais</p>
+            </details>
+        </caption>
+        <tr>
+            <th>name</th>
+            <td>eren</td>
+        </tr>
+        <tr>
+            <th>weight</th>
+            <td>70kg</td>
+        </tr>
+        <tr>
+            <th>height</th>
+            <td>170cm</td>
+        </tr>
+        <tr>
+            <th>eye-color</th>
+            <td>green</td>
+        </tr>
+    </table>
+    <table>
+        <caption>color</caption>
+        <tr>
+            <th></th>
+            <th>Red</th>
+            <th>Green</th>
+            <th>Blue</th>
+        </tr>
+        <tr>
+            <th>Red</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Green</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Blue</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table id="table">
+        <caption>Student info</caption>
+        <tr id="tr1" style="border: 2px red dashed;">
+            <th>Name</th>
+            <th>Reg No.</th>
+            <th>Branch</th>
+        </tr>
+        <tr id="tr2" style="border: 4px blue dotted;">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="tr3" style="border: 1px green solid;">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="tr4" style="border-color: cyan;">
+            <td>helo</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

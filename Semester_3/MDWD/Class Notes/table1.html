@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>table 1</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td, th{
+            border: 1px solid blue;
+            padding: 8px;
+        }
+        th{
+            color: white;
+            background-color: brown;
+        }
+        td{
+            background-color: rgb(235, 175, 175);
+        }
+        .hi{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gender Classification by Religion</h1>
+    <table>
+        <tr>
+            <th rowspan="3">Religion</th>
+            <th colspan="4">Gender Classification</th>
+            <th rowspan="3">No. of Population</th>
+        </tr>
+        <tr>
+            <td colspan="2">Male</td>
+            <td colspan="2">Female</td>
+        </tr>
+        <tr>
+            <td class="hi">Literates</td>
+            <td class="hi">Illiterates</td>
+            <td class="hi">Literates</td>
+            <td class="hi">Illiterates</td>
+            
+        </tr>
+        <tr>
+            <td rowspan="2">Hindu</td>
+            <td colspan="2">30</td>
+            <td colspan="2">30</td>
+            <td rowspan="2">60</td>
+        </tr>
+        <tr class="hi">
+            <td class="hi">16</td>
+            <td class="hi">14</td>
+            <td class="hi">10</td>
+            <td class="hi">20</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Muslim</td>
+            <td colspan="2">12</td>
+            <td colspan="2">8</td>
+            <td rowspan="2">20</td>
+        </tr>
+        <tr>
+            <td class="hi">06</td>
+            <td class="hi">06</td>
+            <td class="hi">05</td>
+            <td class="hi">03</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Christians</td>
+            <td colspan="2">07</td>
+            <td colspan="2">08</td>
+            <td rowspan="2">15</td>
+        </tr>
+        <tr>
+            <td class="hi">05</td>
+            <td class="hi">02</td>
+            <td class="hi">06</td>
+            <td class="hi">02</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Sikh</td>
+            <td colspan="2">03</td>
+            <td colspan="2">02</td>
+            <td rowspan="2">05</td>
+        </tr>
+        <tr>
+            <td class="hi">02</td>
+            <td class="hi">01</td>
+            <td class="hi">00</td>
+            <td class="hi">02</td>
+        </tr>
+    </table>
+</body>
+</html>
