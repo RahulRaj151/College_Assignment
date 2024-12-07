@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="date"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50; 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer; 
+            font-size: 16px; 
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Job Details Form</h1>
+
+<form method="post">
+    <h2>Current Job</h2>
+    <label for="current-job-title">Job Title:</label>
+    <input type="text" id="current-job-title" name="current-job-title" required>
+
+    <label for="current-company">Company:</label>
+    <input type="text" id="current-company" name="current-company" required>
+
+    <label for="current-location">Location:</label>
+    <input type="text" id="current-location" name="current-location" required>
+
+    <label for="current-start-date">Start Date:</label>
+    <input type="date" id="current-start-date" name="current-start-date" required>
+
+    <label for="current-responsibilities">Responsibilities:</label>
+    <textarea id="current-responsibilities" name="current-responsibilities" rows="4" required></textarea>
+
+    <h2>Previous Job</h2>
+    <label for="previous-job-title">Job Title:</label>
+    <input type="text" id="previous-job-title" name="previous-job-title" required>
+
+    <label for="previous-company">Company:</label>
+    <input type="text" id="previous-company" name="previous-company" required>
+
+    <label for="previous-location">Location:</label>
+    <input type="text" id="previous-location" name="previous-location" required>
+
+    <label for="previous-start-date">Start Date:</label>
+    <input type="date" id="previous-start-date" name="previous-start-date" required>
+
+    <label for="previous-end-date">End Date:</label>
+    <input type="date" id="previous-end-date" name="previous-end-date">
+
+    <label for="previous-responsibilities">Responsibilities:</label>
+    <textarea id="previous-responsibilities" name="previous-responsibilities" rows="4" required></textarea>
+
+    <input type="submit" value="Submit Job Details">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Personal info</title>
+</head>
+<style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+         h1{
+        text-align: center;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .nav{
+        list-style-type: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        }
+        .nav li{
+        list-style-type: none;
+        display: inline-block;
+        font-size: 20px;
+        padding: 20px;
+        }
+</style>
+<body>
+    <h1>Personal Information</h1>
+    <ul class="nav">
+        <li><button type="button">Sign Up </button></li>
+        <li><button type="button">Log In </button></li>
+    </ul>
+
+    <form action="/upload" enctype="multipart/form-data" method="post">
+        <div></div>
+        <div>
+            <label for="username"> Full name </label><br>
+            <input type="text" name="username" required placeholder="First name">
+            <input type="text" name="username" required placeholder="Last name">
+
+        </div>
+        <br>
+            <p> Gender</p>
+            <label> <input type="checkbox" name="Gender" value="male"> Male</label>
+            <label> <input type="checkbox" name="Gender" value="female"> female </label>
+            <br>
+
+        <div>
+            <label for="email"> Email </label><br>
+            <input type="email" name="email" required placeholder="abc@Gmail.com">
+        </div>
+        <br>
+        <div>
+            <label for="address"> Address </label><br>
+            <textarea name="address" rows="10" cols="20" placeholder="Street 1"> </textarea>
+            <textarea name="address" rows="10" cols="20" placeholder="Street 2">  </textarea>
+
+        </div>
+
+        <ul class="nav">
+            <input type="submit" value="Send form data" onclick="window.open('education.html')">
+            <li><input type="reset" value="Clear form"></li>
+        </ul>
+    </form>
+</body>
+</html>

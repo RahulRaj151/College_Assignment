@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fieldset</title>
+    <style>
+        fieldset{
+            background-color: aqua;
+            border: none;
+            width: 300px;
+        }
+        legend{
+            text-align: center;
+        }
+        progress::-webkit-progress-bar, progress{
+            height: 10px;
+            background: #dfdfdf;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 2) inset;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>With fieldset</h2>
+    <fieldset>
+        <legend>Oatmeal Varities</legend>
+        <label><input type="radio" name="Oatmeal">Apple Cinnamon</label>
+        <label><input type="radio" name="Oatmeal">Nutty Crunch</label>
+        <label><input type="radio" name="Oatmeal">Brown Sugar</label>
+    </fieldset>
+    <hr>
+    <h2>Without fieldset</h2>
+    <legend>Oatmeal Varities</legend>
+    <label><input type="radio" name="Oatmeal1">Apple Cinnamon</label>
+    <label><input type="radio" name="Oatmeal1">Nutty Crunch</label>
+    <label><input type="radio" name="Oatmeal1">Brown Sugar</label>
+    <hr>
+    <h2>tabindex</h2>
+    <p>
+        <label >Enter your <a href="#">Name</a>
+            <input type="text" name="username" tabindex="1">
+        </label>
+    </p>
+    <p>
+        <label >Enter your <a href="#">age</a>
+            <input type="text" name="age" tabindex="2">
+        </label> 
+    </p>   
+    <p>
+        <input type="submit" tabindex="3">
+    </p>
+    <hr>
+    <h2>Access key</h2>
+    <p>What are your interest</p>
+    <label>tv <input type="checkbox" name="tv" accesskey="T"></label>
+    <label>Music <input type="checkbox" name="music" accesskey="M"></label>
+    <label>Sports <input type="checkbox" name="sports" accesskey="S"></label>
+    <hr>
+    <label for="Q1">In the text area</label>
+    <textarea id="Q1" disabled>this is disabled</textarea>
+    <hr>
+    <label for="month">this is readonly </label>
+    <input type="text" id="month" value="readonly" readonly>
+    <hr>
+    Progesses bar 
+    <progress id="prog" value="40" max="100"></progress>
+    <hr>
+    <h2>meter bar</h2>
+    <meter min="0" max="14.2" high="13.5" low="3" optimum="14" value="2.5"> </meter> is very low <br>
+    <meter min="0" max="22" high="20" low="5" optimum="21" value="14"> </meter> is OK <br>
+    <meter min="0" max="5" high="4.5" low="1" optimum="4.6" value="4.7"> </meter> is very good
+</body>
+</html>
