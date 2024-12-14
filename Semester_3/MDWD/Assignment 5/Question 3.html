@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Boxes with Hover Effect</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            height: 100px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            transition: padding 0.3s, margin 0.3s;
+        }
+        .box1 {
+            background-color: lightblue;
+            border: 1px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+        .box2 {
+            background-color: lightgreen;
+            border: 2px solid green;
+            padding: 10px;
+            margin: 10px;
+        }
+        .box3 {
+            background-color: lightcoral;
+            border: 3px solid blue;
+            padding: 10px;
+            margin: 10px;
+        }
+        .box:hover {
+            padding: 40px; 
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</body>
+</html>
