@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Question 1</title>
+    <title>Fixed Vertical Menu Bar</title>
     <style>
-        .nav{
-            display: inline-block;
-            background-color: yellow;
-            list-style-type: none;
-            text-align: center;
-            margin: 0;
-            padding: 0;
+         body {
+        font-family: Arial, sans-serif;
         }
-        .nav li{
-            display: flex;
-            font-size: 20px;
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0; 
+            width: 200px; 
+            height: 100%; 
+            background-color: #333; 
+            color: white; 
+            padding: 20px;
+        }
+        .menu ul {
+            list-style-type: none; 
+            padding: 0;
+            margin-left: auto;
+        }
+        .menu ul li ,a{
+            margin: 10px 0; 
+            color: white; 
+            text-decoration: none;
+        }
+        .content {
+            margin-left: 220px; 
             padding: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Horizontal navigation Links</h1>
-    <ul class="nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#clients">Our Clients</a></li>
-    </ul>
+    <div class="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#section4">Section 4</a></li>
+            <li><a href="#section5">Section 5</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to the Page</h1>
+        <p>This is some content on the page. Scroll down to see the fixed menu in action.</p>
+        <div id="section1"><h2>Section 1</h2>Content for section 1.</div>
+        <div id="section2"><h2>Section 2</h2>Content for section 2.</div>
+        <div id="section3"><h2>Section 3</h2>Content for section 3.</div>
+        <div id="section4"><h2>Section 4</h2>Content for section 4.</div>
+        <div id="section5"><h2>Section 5</h2>Content for section 5.</div>
+    </div>
 </body>
 </html>
