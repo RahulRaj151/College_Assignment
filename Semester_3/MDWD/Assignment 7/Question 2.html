@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback Form</title>
+    <style>
+        body {
+            background-color: white;
+        }
+        #form{
+            margin: 20px;
+        }
+        .rating label {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Feedback Form</h1>
+        <form id="form">
+            <div>
+                <label for="name">Name (max 15 characters):</label><br>
+                <input type="text" id="name" name="name" required maxlength="15">
+            </div>
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                Rating:
+                <div class="rating">
+                    <label><input type="radio" name="rating" value="1" required> 1 Star</label>
+                    <label><input type="radio" name="rating" value="2"> 2 Stars</label>
+                    <label><input type="radio" name="rating" value="3"> 3 Stars</label>
+                    <label><input type="radio" name="rating" value="4"> 4 Stars</label>
+                    <label><input type="radio" name="rating" value="5"> 5 Stars</label>
+                </div>
+            </div>
+            <div>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+</body>
+</html>
