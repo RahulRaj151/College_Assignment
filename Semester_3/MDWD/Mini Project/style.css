@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body{
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210408/pngtree-white-abstract-vector-web-background-design-image_597636.jpg);
+}
+header nav a.active, header nav a:hover {
+    color: #f4f4f9;
+}
+/* Styling Header Section*/
+header {
+    width: 100%;
+    background: #ADD8E6;
+    color: rgb(4, 4, 4);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.name{
+    position: relative;
+    justify-content: end;
+    font-size: 3.2rem;
+    font-weight: bolder;
+    
+}
+header nav a {
+    color: rgb(3, 3, 3);
+    margin-right: 25px;
+    text-decoration: none;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+header nav a::after {
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #FFFFFF; 
+}
+
+/* Styling Home Page */
+.main {
+    text-align: center;
+    height: 600px;
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+.textmain{
+    margin-left: 20%;
+    text-align: left;
+    width: 35%;
+}
+
+.textmain-h1{
+    letter-spacing: 0.25em;
+    font: 95px 'Bebas Neue' ;
+    font-weight: bold;
+}
+
+.textmain-p{
+    font: 35px 'Montserrat';
+    letter-spacing: 0.25em;
+    margin-top: 40px;
+}
+
+/* Styling About me */
+.main-sec-abt{
+    height: auto;
+    width: 100%;
+    margin: 0;
+}
+.abt-sub{
+    display: flex;
+    margin-top: 3%;
+    justify-content: space-around;
+    padding-bottom: 5%;
+}
+.my-photo img{
+
+    width: 300px;
+    border-radius: 11%;
+}
+/* myskill styling */
+.skills-container {
+    padding-bottom: 50px;
+    max-width: 100%;
+    margin: 0 120px;
+}
+label{
+  font-weight: bold;
+}
+.skills-container {
+  font-family: Arial, sans-serif;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+progress {
+  width: 100%;
+  height: 1.5rem;
+  border: none;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-value {
+  background-color:red;
+  border-radius: 8px;
+}
+
+  .skills-container h2 span {
+    color: #f90202;
+  }
+
+  .skills-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 65px;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 400px;
+  }
+  
+  .skill {
+    display: grid;
+  }
+
+/* Styling portfolio */
+.main-sec-ptf{
+    height: auto;
+    width: 100%;
+    margin: 0;
+}
+
+/* project */
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .project-image {
+    flex: 1 1 40%;
+    max-width: 40%;
+    border-radius: 8px;
+  }
+  
+  .project-details {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .project-details h1 {
+    color: #f90202;
+    margin-bottom: 1rem;
+  }
+  
+  .project-details p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .view-button {
+    align-self: flex-start;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #f90202;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .view-button:hover {
+    background-color: #a70202;
+  }
+
+
+/* Styling Contact Page */
+.main-sec-cnt{
+    height: auto;
+    width: 100%;
+    margin: 0;
+}
+
+.cnt-hd{
+    text-align: center;
+    padding: 50px;
+    letter-spacing: 0.25em;
+
+}
+.cnt-main-h1{
+    font: 50px 'Bebas Neue' ;
+    font-weight: bold;
+}
+.cnt-sub-p{
+    margin-top: 15px;
+    font: 19px sans-serif;
+    letter-spacing: 0.15em;
+}
+
+.r-in-clr{
+    
+    color: #f90202;
+}
+
+.cnt-sub{
+    display: flex;
+    margin-top: 3%;
+    justify-content: space-around;
+    padding-bottom: 5%;
+}
+
+.abt-text{
+    width: 39%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(33, 31, 31, 0.2);
+    text-align: left;
+}
+.abt-text h1{
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+.abt-text p{
+    font-size: 19px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+}
+/* formsection */
+.message-form {
+    width: 35%;
+    color: white;
+    padding: 20px;
+    background-color: #121212; 
+    border-radius: 19px;
+    box-shadow: 0 4px 8px rgba(33, 31, 31, 0.2);
+    text-align: center;
+  }
+  
+  .message-form h2 {
+    font-size: 24px;
+    margin-bottom: 35px;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 10px;
+  }
+  input[type="text"],
+  input[type="email"] {
+      color: white;
+      width: 95%;
+      padding: 10px;
+      margin-bottom: 15px;
+      background-color: #040404;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+  }
+  
+  input::placeholder {
+      color: #a8a5a5;
+      font-weight: 520;
+      letter-spacing: 0.1rem;
+      padding-left: 5px;
+  }
+  
+  textarea {
+    color: white;
+    width: 95%;
+    height: 6em;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #040404; 
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+  }
+  textarea::placeholder {
+    color: #a8a5a5;
+    font-weight: 520;
+    letter-spacing: 0.1rem;
+    padding-left: 5px;;
+  }
+  
+  button {
+    background-color: #c0392b; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #a93226; 
+  }
+
+/* contactinfo */
+.contact-card {
+    width: 35%;
+    padding: 20px;
+    border-radius: 19px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(33, 31, 31, 0.2);
+  }
+  
+  .contact-card h2 {
+    font-size: 28px;
+    margin-bottom: 45px;
+    text-align: center;
+  }
+  
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .contact-detail i {
+    width: 50px;
+    height: 50px;
+    margin-right: 25px;
+    display: inline-block;
+    background: #fff;
+    color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+/* Styling Footer Section */
+footer {
+  color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: #090909;
+    padding: 20px 0;
+}
