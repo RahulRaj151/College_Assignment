@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#sitenav ol{
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+#sitenav li{
+    display: inline;
+    padding-left: 1em;
+    margin-left: 1em;
+    border-left: 1px solid black
+}
+#sitenav li:first-child{
+    padding-left: 0;
+    border-left: none;
+    margin-left: 0;
+}
+#main{
+    padding: 0 2em 2em 12em;
+}
+#content{
+    float: left;
+}
+#sidebar{
+    float: left;
+    position: relative;
+    width: 10em;
+    right: 11em;
+    margin-left: -100%;
+    top: 1em;
+}
+#sidebar ol{
+    margin: 0 0 1em 0;
+}
