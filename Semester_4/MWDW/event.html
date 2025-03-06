@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>JavaScript HTML Events</h1>
+    <h2>the onclick attributes</h2>
+    <button onclick="document.getElementById('demo').innerHTML =Data()">The time is?</button>
+    <p id="demo"></p>
+    <script>
+        function Data() {
+            const now = new Date();
+            const currentTime = now.toLocaleTimeString();
+            return currentTime;
+        }
+    </script>
+    <hr>
+    <p>Select a new car from the list</p>
+    <select id="mySelect" onchange="myFunction()">
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Volvo">Volvo</option>
+    </select>
+    <p>When you select a new car a function is triggered which output s the value of the selected car.</p>
+    <p id="demo1"></p>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("demo1").innerHTML = "you selected: "+ x;
+        }
+    </script>
+    <hr>
+    <h1>HTML DOM Events</h1>
+    <h2>The onmouseover event</h2>
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzJDx2rgz5O2J26_fzWpRxRIHyKbg_uOfsUQ&s" alt="image" width="32" height="32">
+    <p>the function bigImg() is triggered when the user moves the mouse pointer over the image.</p>
+    <p>the function normalImg() is triggered when the mouse pointer is moved out of the image.</p>
+    <script>
+        function bigImg(x){
+            x.style.height = "64px";
+            x.style.width = "64px";
+        }
+        function normalImg(x){
+            x.style.height ="32px";
+            x.style.width ="32px";
+        }
+    </script>
+    <hr>
+    <p>select some of the text:</p>
+    <input type="text" value="hello world!" onselect="Function()">
+    <script>
+        function Function(){
+            alert("you have selected the text!");
+        }
+    </script>
+</body>
+</html>

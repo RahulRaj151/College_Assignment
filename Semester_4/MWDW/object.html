@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <h1>Creating javaScript Objects</h1>
+    <h2>Using an object Literal</h2>
+    <p id="demo"></p>
+    <script>
+        const person ={
+            firstName:"Rahul",
+            lastName:"Raj",
+            age:20,
+            eyeColor:"purple"
+        };
+        document.getElementById("demo").innerHTML= person.firstName + " is " + person.age + " years old "
+    </script>
+    <hr>
+    <h1>The window Location Object</h1>
+    <h2>The origin Property</h2>
+    <p id="demo1"></p>
+    <script>
+        let origin = window.location.origin;
+        document.getElementById("demo1").innerHTML= origin;
+    </script>
+    <hr>
+    <h1>The Window History Object</h1>
+    <h2>The history.lenght Property</h2>
+    <p id="demo2"></p>
+    <p>Since this is a new window frame, history.length will always return 1</p>
+    <script>
+        let length = history.length;
+        document.getElementById("demo2").innerHTML= length;
+    </script>
+    
+</body>
+</html>
