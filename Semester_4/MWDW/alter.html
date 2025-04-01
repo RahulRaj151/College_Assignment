@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altering the classes on the fly</title>
+    <style>
+        p{
+            padding: 5em;
+        }
+        p.highlighted{
+            background: #666666;
+        }
+    </style>
+</head>
+<body>
+    <p>This is first paragraph of the page</p>
+    <p>this is second paragaph of the page</p>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("p").mouseenter(function(){
+                $(this).addClass("highlighted");
+            });
+            $("p").mouseleave(function(){
+                $(this).removeClass("highlighted");
+            });
+        });
+    </script>
+</body>
+</html>

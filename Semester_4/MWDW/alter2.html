@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altering the classes on the fly</title>
+    <style>
+        li.highlighted{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+    </ul>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("li").click(function(){
+            if (!$(this).hasClass("highlighted")){
+                $(this).addClass("highlighted");
+            }
+            else{
+                alert("this list Ite is already highlighted")
+            }
+        });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide and seek</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: blue;
+            color: aliceblue;
+        }
+        #red{
+            background-color: red;
+        }
+        #green{
+            background-color: green;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <script src="jquery.js"></script>
+    <script></script>
+    <script>
+        $(function(){
+            $("#red").click(function(){
+                $("div").hide("div");
+            });
+            $("#green").click(function(){
+                $("div").show("div")
+            })
+        });
+    </script>
+    <button id="red">RED</button>
+    <button id="green">GREEN</button>
+    <div><p>lets play red light green light</p></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Information</title>
+    <style>
+        img{
+            width: 400px;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('div[id]').hide();
+            $('.link').click(function(event) {
+                event.preventDefault();
+                var countryId = $(this).attr('href');
+                $('div[id]').hide();
+                $(countryId).show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Country Information</h1>
+    <nav>
+        <ul>
+            <li><a href="#Japan" class="link">Japan</a></li>
+            <li><a href="#Poland" class="link">Poland</a></li>
+            <li><a href="#Switzerland" class="link">Switzerland</a></li>
+            <li><a href="#UK" class="link">United Kingdom</a></li>
+        </ul>
+    </nav>
+
+    <div id="Japan">
+        <h2>Japan</h2>
+        <img src="https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg" alt="">
+        <p>Japan is an island country in East Asia. Located in the Pacific Ocean off the northeast coast of the Asian mainland, it is bordered on the west by the Sea of Japan and extends from the Sea of Okhotsk in the north to the East China Sea in the south. The Japanese archipelago consists of four major islands—Hokkaido, Honshu, Shikoku, and Kyushu—and thousands of smaller islands, covering 377,975 square kilometers (145,937 sq mi). Japan has a population of over 123 million as of 2025, making it the eleventh-most populous country.</p>
+    </div>
+    <div id="Poland">
+        <h2>Poland</h2>
+        <img src="https://i.natgeofe.com/k/6eb7149d-9876-40ac-9bf7-d261931ddb56/poland-warsaw_16x9.jpg?w=1200" alt="">
+        <p>Poland, officially the Republic of Poland, is a country in Central Europe. It extends from the Baltic Sea in the north to the Sudetes and Carpathian Mountains in the south, bordered by Lithuania and Russia[f] to the northeast, Belarus and Ukraine to the east, Slovakia and the Czech Republic to the south, and Germany to the west. The territory is characterised by a varied landscape, diverse ecosystems, and temperate climate. Poland is composed of sixteen voivodeships and is the fifth most populous member state of the European Union (EU), with over 38 million people, and the fifth largest EU country by land area, covering a combined area of 312,696 km2 (120,733 sq mi).</p>
+    </div>
+    <div id="Switzerland">
+        <h2>Switzerland</h2>
+        <img src="https://cdn.britannica.com/36/178136-050-7F77D46B/village-Alpine-valley-canton-Saint-Moritz-Engadin.jpg" alt="">
+        <p>Switzerland,officially the Swiss Confederation, is a landlocked country located in west-central Europe.[f][13] It is bordered by Italy to the south, France to the west, Germany to the north, and Austria and Liechtenstein to the east. Switzerland is geographically divided among the Swiss Plateau, the Alps and the Jura; the Alps occupy the greater part of the territory, whereas most of the country's nearly 9 million people are concentrated on the plateau, which hosts its largest cities and economic centres, including Zurich, Geneva, and Lausanne.</p>
+    </div>
+    <div id="UK">
+        <h2>United Kingdom of Great Britain</h2>
+        <p>The United Kingdom of Great Britain and Northern Ireland, commonly known as the United Kingdom (UK) or Britain, is a country in Northwestern Europe, off the coast of the continental mainland. It comprises England, Scotland, Wales, and Northern Ireland.[n] The UK includes the island of Great Britain, the north-eastern part of the island of Ireland, and most of the smaller islands within the British Isles, covering 94,354 square miles (244,376 km2). Northern Ireland shares a land border with the Republic of Ireland; otherwise, the United Kingdom is surrounded by the Atlantic Ocean, the North Sea, the English Channel, the Celtic Sea, and the Irish Sea. The United Kingdom had an estimated population of 68.2 million people in 2023. The capital and largest city of both England and the United Kingdom is London, whose wider metropolitan area is the largest in Western Europe, with a population of 14.9 million. The cities of Edinburgh, Cardiff, and Belfast are the national capitals of Scotland, Wales, and Northern Ireland, respectively.</p>
+    </div>
+</body>
+</html>

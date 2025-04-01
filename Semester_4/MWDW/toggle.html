@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle</title>
+    <style>
+        .highlight{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").toggleClass("highlight");
+            })
+        })
+    </script>
+    <button>Chnage the color</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsa est et corporis aliquid sit dolores debitis autem expedita nesciunt dolore fugit, perferendis quos quasi nemo. Consequuntur voluptatibus doloribus hic!</p>
+</body>
+</html>

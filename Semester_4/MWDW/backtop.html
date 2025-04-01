@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>back to paragraph</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: blue;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+        $("button").click(function() {
+            var bgColor = $("div").css("background-color");
+            $("p").css("color", bgColor);
+            $("div").css("background-color", "white")
+        });
+    });
+    </script>
+    <button>GO BACK TO PARAGRAPH!! </button>
+    <div><p>background color come back to me</p></div>
+</body>
+</html>

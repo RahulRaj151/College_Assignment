@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-Up</title>
+</head>
+<body>
+    <h1>Pop-Up Example</h1>
+    <p>
+        <a href="about me/index.html" onclick="popup(this.href)" id="launchpopup">Launch Pop-Up</a>
+    </p>
+    <script>
+        function popup(url){
+            var mywindow = window.open(url, 'name', 'height=200, width=400');
+            return false;
+        }
+        window.onload = function(){
+            var link = document.getElementById("launchpopup")
+            link.onclick = function(){
+                return popup(this.href);
+            }
+        }
+    </script>
+</body>
+</html>

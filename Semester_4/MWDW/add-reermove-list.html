@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add remove list</title>
+</head>
+<body>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                $("li").add("li")
+            })
+            $("#delete").click(function(){
+                $("li").remove("li")
+            })
+        })
+    </script>
+    <ul>
+        <li>list 1</li>
+    </ul>
+    <button id="add">Add</button>
+    <button id="delete">Delete</button>
+</body>
+</html>

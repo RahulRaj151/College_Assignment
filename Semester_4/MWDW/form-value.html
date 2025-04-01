@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altering form value</title>
+    <style>
+        input[name="email"] {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Email address: <input type="email" name="email" value="person@example.com" size="40"></label>
+        <input id="submit" type="submit" disabled>
+        <br><br>
+    </form>
+    <ul id="editable">
+    </ul>
+    <form id="addElement">
+        <label>New List item: <input type="text" name="liContent" size="60"></label>
+        <input type="submit" value="additem"/>
+    </form>
+    <p><a href="#" id="clearlist">clear list</a></p>
+    <script src="jquery.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+        //this is for first form
+        $(function() {
+            $("input[name='email']").focus(function() {
+                if ($(this).val() == "person@example.com") {
+                    $(this).val("");
+                    $(this).css("color", "black");
+                }
+            });
+            $("input[name='email']").blur(function() {
+                if ($(this).val() == "") {
+                    $(this).val("person@example.com");
+                    $(this).css("color", "#999");
+                    $("#submit").attr("disabled", "disabled");
+                } else {
+                    $("#submit").removeAttr("disabled");
+                }
+            });
+        //till here
+
+        // here is for form with id=" add element"
+            $("#clearlist").click(function(event){
+                event.preventDefault();
+                $("#editable").slideUp('slow', function(){
+                    $("#editable").empty()
+                    $("#editable").show();
+                });
+            })
+            $("#addElement").submit(function(event){
+                event.preventDefault();
+                var content = "<li>"+$("#addElement input[name='liContent']").val()+"</li>"
+                $(content).hide().appendTo("#editable").fadeIn("slow").css("display", "list-item");
+                $("#addElement input[name='liContent']").val("").focus()
+            });
+            $(document).on('click', "#editable li", function (){
+                $(this).fadeOut('slow', function(){
+                    $(this).remove()
+                });
+            })
+            // till here
+            });
+    </script>
+</body>
+</html>

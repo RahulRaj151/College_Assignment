@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+</head>
+<body>
+    <a href="index.html">click in this link and you will show an alert </a>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("a").click(function(event){
+                alert("you have clicked a link")
+            });
+        });
+    </script>
+    <hr>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).hide();
+            });
+        });
+    </script>
+    <p>If you click on me i will disappear</p>
+    <p>Click me too</p>
+    <p>i want to disappear</p>
+    <hr>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").dblclick(function(){
+                $(".test").hide();
+            });
+        });
+    </script>
+    <h2 class="test">If you click on on the button i will disappear</h2>
+    <p class="test">me too</p>
+    <p>i want to disappear</p>
+    <button>Click me</button>
+    <hr>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#p1").mouseenter(function(){
+                alert("you entered p1");
+            });
+        });
+    </script>
+    <p id="p1">move your mouse here an you will get an Alert</p>
+    <hr>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color", "yellow");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color", "green")
+            })
+        });
+    </script>
+    Name: <input type="text" name="Fullname"><br>
+    Email: <input type="email" name="email">
+    <hr>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".p2").css({"background-color": "yellow", "font-size": "200%"})
+            })
+        })
+    </script>
+    <p class="p2" style="background-color: aqua;">It's background color will change when clicked</p>
+    <p class="p2" style="background-color: red">It's background color will change when clicked</p>
+    <p class="p2" style="background-color: purple;">It's background color will change when clicked</p>
+    <button>Set same style for text</button>
+</body>
+</html>
