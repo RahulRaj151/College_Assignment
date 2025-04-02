@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List Styling</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .dynamic-content {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            // Add bold tag to all list items
+            $('#itemList li').prepend('<b>');
+            $('#itemList li').append('</b>');
+
+            // Change colors of specific items
+            $('#itemList li:first').css('color', 'green');
+            $('#itemList li:eq(3)').css('color', 'yellow');
+
+            // Dynamically add content
+            $('body').append(`
+                <div class="dynamic-content">
+                    <h1>Welcome to Dynamic Content</h1>
+                    <p>This content was added dynamically using jQuery.</p>
+                    <img src="data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='40' stroke='black' stroke-width='3' fill='red'/%3E%3C/svg%3E" alt="Sample SVG">
+                </div>
+            `);
+        });
+    </script>
+</body>
+</html>

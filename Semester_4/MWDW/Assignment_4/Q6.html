@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zebra Striped Table</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        #resizeButton {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Department</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>Developer</td>
+                <td>IT</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>Designer</td>
+                <td>Creative</td>
+                <td>London</td>
+            </tr>
+            <tr>
+                <td>Mike Johnson</td>
+                <td>Manager</td>
+                <td>Sales</td>
+                <td>Paris</td>
+            </tr>
+            <tr>
+                <td>Sarah Williams</td>
+                <td>Analyst</td>
+                <td>Finance</td>
+                <td>Tokyo</td>
+            </tr>
+            <tr>
+                <td>Tom Brown</td>
+                <td>Engineer</td>
+                <td>R&D</td>
+                <td>Berlin</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="resizeButton">Resize Button</button>
+
+    <script>
+        $(document).ready(function() {
+            // Apply zebra striping
+            $('#dataTable tbody tr:odd').css('background-color', '#f9f9f9');
+
+            // Button resize functionality
+            $('#resizeButton').click(function() {
+                $(this).css({
+                    'width': '300px',
+                    'height': '500px'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

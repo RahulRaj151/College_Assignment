@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers Sum</title>
+</head>
+<body>
+    <h2>Sum of First 1000 Prime Numbers</h2>
+    <button onclick="calculatePrimes()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        function calculatePrimes() {
+            let primes = [];
+            let num = 2;
+            let sum = 0;
+
+            while (primes.length < 1000) {
+                if (isPrime(num)) {
+                    primes.push(num);
+                    sum += num;
+                }
+                num++;
+            }
+
+            document.getElementById('result').innerHTML = 
+                `Sum of first 1000 prime numbers: ${sum}<br><br>` +
+                `Prime numbers: [${primes.join(', ')}]`;
+        }
+    </script>
+</body>
+</html>

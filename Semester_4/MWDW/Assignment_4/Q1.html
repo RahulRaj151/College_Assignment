@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Focus Effect</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .input-container {
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <h2>Focus Effect Demo</h2>
+        <input type="text" placeholder="Click me to see the effect">
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('input').focus(function() {
+                $(this).css('background-color', '#e6f3ff');
+            });
+
+            $('input').blur(function() {
+                $(this).css('background-color', '');
+            });
+        });
+    </script>
+</body>
+</html>

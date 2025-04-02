@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Largest and Smallest Numbers</title>
+</head>
+<body>
+    <h2>Find Second Largest and Second Smallest Numbers</h2>
+    <div>
+        <label for="numbers">Enter numbers (comma-separated):</label>
+        <input type="text" id="numbers" placeholder="e.g., 1,2,3,4,5">
+    </div>
+    <div style="margin-top: 10px;">
+        <button onclick="findNumbers()">Find</button>
+    </div>
+    <p id="result"></p>
+
+    <script>
+        function findSecondNumbers(arr) {
+            if (arr.length < 2) {
+                return { error: 'Array must contain at least 2 numbers' };
+            }
+
+            // Remove duplicates and sort the array
+            let uniqueArr = [...new Set(arr)].sort((a, b) => a - b);
+            
+            if (uniqueArr.length < 2) {
+                return { error: 'Array must contain at least 2 different numbers' };
+            }
+
+            return {
+                secondSmallest: uniqueArr[1],
+                secondLargest: uniqueArr[uniqueArr.length - 2]
+            };
+        }
+
+        function findNumbers() {
+            let input = document.getElementById('numbers').value;
+            let numbers = input.split(',').map(num => Number(num.trim()));
+            
+            // Validate input
+            if (numbers.some(isNaN)) {
+                document.getElementById('result').innerHTML = 'Please enter valid numbers';
+                return;
+            }
+
+            let result = findSecondNumbers(numbers);
+            if (result.error) {
+                document.getElementById('result').innerHTML = result.error;
+            } else {
+                document.getElementById('result').innerHTML = 
+                    `Second Smallest Number: ${result.secondSmallest}<br>` +
+                    `Second Largest Number: ${result.secondLargest}`;
+            }
+        }
+    </script>
+</body>
+</html>

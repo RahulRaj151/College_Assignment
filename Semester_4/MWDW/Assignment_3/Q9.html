@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <h2>FizzBuzz</h2>
+    <div style="margin-top: 10px;">
+        <button onclick="runFizzBuzz()">Run FizzBuzz</button>
+    </div>
+    <pre id="result" style="white-space: pre-wrap; font-family: monospace;"></pre>
+
+    <script>
+        function fizzBuzz() {
+            let result = [];
+            for (let i = 1; i <= 100; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    result.push('FizzBuzz');
+                } else if (i % 3 === 0) {
+                    result.push('Fizz');
+                } else if (i % 5 === 0) {
+                    result.push('Buzz');
+                } else {
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        function runFizzBuzz() {
+            let numbers = fizzBuzz();
+            let output = numbers.map((num, index) => {
+                // Add line break every 10 numbers for better readability
+                return (index % 10 === 9) ? num + '\n' : num + ' ';
+            }).join('');
+            
+            document.getElementById('result').innerHTML = output;
+        }
+    </script>
+</body>
+</html>

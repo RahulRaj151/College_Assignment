@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Div</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #interactive-div {
+            width: 400px;
+            height: 200px;
+            background-color: pink;
+            border: 3px solid brown;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="interactive-div">
+        MODERN WEB DEVELOPMENT WORKSHOP-2
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#interactive-div')
+                .click(function() {
+                    $(this).text('Clicked!');
+                })
+                .dblclick(function() {
+                    $(this).css('background-color', 'orange');
+                })
+                .mouseenter(function() {
+                    $(this).css('border-color', 'green');
+                })
+                .mouseleave(function() {
+                    $(this).css('border-color', 'blue');
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color & Div Toggle</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            transition: transform 0.2s ease;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        #redBtn { background-color: #ff4444; }
+        #blueBtn { background-color: #4444ff; }
+        #greenBtn { background-color: #44aa44; }
+        #toggleBtn { background-color: #666666; }
+        .content-div {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button id="redBtn">Red Background</button>
+        <button id="blueBtn">Blue Background</button>
+        <button id="greenBtn">Green Background</button>
+        <button id="toggleBtn">Toggle Divs</button>
+    </div>
+
+    <div class="content-div">
+        <h2>First Content Division</h2>
+        <p>This is the first content division that can be toggled.</p>
+    </div>
+
+    <div class="content-div">
+        <h2>Second Content Division</h2>
+        <p>This is the second content division that can be toggled.</p>
+    </div>
+
+    <div class="content-div">
+        <h2>Third Content Division</h2>
+        <p>This is the third content division that can be toggled.</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Background color buttons
+            $('#redBtn').click(function() {
+                $('body').css('background-color', 'red');
+            });
+
+            $('#blueBtn').click(function() {
+                $('body').css('background-color', 'blue');
+            });
+
+            $('#greenBtn').click(function() {
+                $('body').css('background-color', 'green');
+            });
+
+            // Toggle div visibility
+            $('#toggleBtn').click(function() {
+                $('.content-div').toggle();
+            });
+        });
+    </script>
+</body>
+</html>

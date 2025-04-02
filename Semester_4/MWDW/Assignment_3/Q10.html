@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+    <div>
+        <label for="num1">First Number:</label>
+        <input type="number" id="num1">
+    </div>
+    <div style="margin-top: 10px;">
+        <label for="operator">Operator:</label>
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+    </div>
+    <div style="margin-top: 10px;">
+        <label for="num2">Second Number:</label>
+        <input type="number" id="num2">
+    </div>
+    <div style="margin-top: 10px;">
+        <button onclick="calculate()">Calculate</button>
+    </div>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            let num1 = Number(document.getElementById('num1').value);
+            let num2 = Number(document.getElementById('num2').value);
+            let operator = document.getElementById('operator').value;
+            let result;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').innerHTML = 'Please enter valid numbers';
+                return;
+            }
+
+            switch(operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        document.getElementById('result').innerHTML = 'Cannot divide by zero';
+                        return;
+                    }
+                    result = num1 / num2;
+                    break;
+                case '%':
+                    if (num2 === 0) {
+                        document.getElementById('result').innerHTML = 'Cannot calculate modulo with zero';
+                        return;
+                    }
+                    result = num1 % num2;
+                    break;
+            }
+
+            document.getElementById('result').innerHTML = 
+                `${num1} ${operator} ${num2} = ${result}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Headings</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .link-container {
+            text-align: right;
+            margin-top: 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            cursor: pointer;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modern Web Development Workshop</h1>
+    <h2>Data Structure and Algorithm</h2>
+    <h3>Computer Networks</h3>
+    <h4>Database Management System</h4>
+    <h5>Operating Systems</h5>
+    <h6>Software Engineering</h6>
+
+    <div class="link-container">
+        <a href="http://www.google.com" id="changeLink">www.Google.com</a>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('h1, h2, h3, h4, h5, h6').click(function() {
+                $('h1, h2, h3, h4, h5, h6').hide();
+            });
+
+            $('#changeLink').click(function(e) {
+                e.preventDefault();
+                $(this).text('www.soa.com').attr('href', 'http://www.soa.com');
+            });
+        });
+    </script>
+</body>
+</html>

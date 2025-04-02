@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Numbers Filter</title>
+</head>
+<body>
+    <h2>Filter Odd Numbers</h2>
+    <div>
+        <label for="numbers">Enter numbers (comma-separated):</label>
+        <input type="text" id="numbers" placeholder="e.g., 1,2,3,4,5">
+    </div>
+    <div style="margin-top: 10px;">
+        <button onclick="filterOddNumbers()">Filter</button>
+    </div>
+    <p id="result"></p>
+
+    <script>
+        function getOddNumbers(arr) {
+            return arr.filter(num => Math.abs(num) % 2 === 1);
+        }
+
+        function filterOddNumbers() {
+            let input = document.getElementById('numbers').value;
+            let numbers = input.split(',').map(num => Number(num.trim()));
+            
+            // Validate input
+            if (numbers.some(isNaN)) {
+                document.getElementById('result').innerHTML = 'Please enter valid numbers';
+                return;
+            }
+
+            let oddNumbers = getOddNumbers(numbers);
+            document.getElementById('result').innerHTML = 
+                `Original Numbers: [${numbers.join(', ')}]<br>` +
+                `Odd Numbers: [${oddNumbers.join(', ')}]`;
+        }
+    </script>
+</body>
+</html>
