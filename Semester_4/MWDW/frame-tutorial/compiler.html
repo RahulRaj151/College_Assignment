@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Compiler</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+            background-color: #eaeaea;
+        }
+        #output {
+            margin-top: 10px;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            height: 100px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Code Compiler</h2>
+    <textarea id="code" placeholder="Write your JavaScript code here..."></textarea>
+    <button onclick="runCode()">Run Code</button>
+    <div id="output"></div>
+
+    <script>
+        function runCode() {
+            const code = document.getElementById('code').value;
+            const output = document.getElementById('output');
+            output.textContent = ''; // Clear previous output
+
+            try {
+                // For JavaScript code execution
+                const result = eval(code);
+                output.textContent = result !== undefined ? result : 'Code executed successfully.';
+            } catch (error) {
+                output.textContent = 'Error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
