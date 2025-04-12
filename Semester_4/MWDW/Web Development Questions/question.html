@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Q&A</title>
+    <link rel="stylesheet" href="question.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            background: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 5px solid #007BFF;
+        }
+        .answer {
+            background: #e9ecef;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Web Development Questions and Answers</h1>
+
+    <div class="question">
+        <h2>1. Mention four HTML5 structural tags and explain their roles in page layout.</h2>
+    </div>
+    <div class="answer">
+        <p><strong>&lt;header&gt;</strong>: Represents introductory content or a group of navigational links.</p>
+        <p><strong>&lt;nav&gt;</strong>: Defines a set of navigation links.</p>
+        <p><strong>&lt;section&gt;</strong>: Represents a thematic grouping of content, typically with a heading.</p>
+        <p><strong>&lt;footer&gt;</strong>: Contains footer information for its nearest sectioning content or the entire page.</p>
+    </div>
+
+    <div class="question">
+        <h2>2. Why is the &lt;section&gt; tag important in HTML5? Provide a code example.</h2>
+    </div>
+    <div class="answer">
+        <p>The &lt;section&gt; tag is important because it helps to semantically group related content.</p>
+        <pre><code>&lt;section&gt;
+    &lt;h2&gt;About Us&lt;/h2&gt;
+    &lt;p&gt;We are a company that values...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>3. Describe how &lt;article&gt; and &lt;aside&gt; differ in meaning and use.</h2>
+    </div>
+    <div class="answer">
+        <p>&lt;article&gt;: Represents a self-contained piece of content that could be distributed independently.</p>
+        <p>&lt;aside&gt;: Contains content that is tangentially related to the content around it.</p>
+    </div>
+
+    <div class="question">
+        <h2>4. Create an HTML5 layout that uses &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, and &lt;footer&gt;.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>&lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+&lt;/header&gt;
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;section&gt;
+    &lt;h2&gt;Welcome to My Website&lt;/h2&gt;
+    &lt;p&gt;This is the main content area.&lt;/p&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+    &lt;p&gt;&copy; 2023 My Website&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>5. Explain the purpose of the &lt;main&gt; element and show its correct use in a page.</h2>
+    </div>
+    <div class="answer">
+        <p>The &lt;main&gt; element represents the dominant content of the document.</p>
+        <pre><code>&lt;main&gt;
+ &lt;h1&gt;Main Content&lt;/h1&gt;
+    &lt;p&gt;This is where the main content goes.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>6. What is the difference between &lt;div&gt; and semantic tags like &lt;header&gt;?</h2>
+    </div>
+    <div class="answer">
+        <p>&lt;div&gt;: A generic container for grouping elements without any semantic meaning.</p>
+        <p>Semantic tags (like &lt;header&gt;, &lt;nav&gt;, etc.): Provide meaning to the content, helping search engines and assistive technologies understand the structure and purpose of the content.</p>
+    </div>
+
+    <div class="question">
+        <h2>7. Write HTML code to create a sticky header using &lt;header&gt; and CSS.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>&lt;header style="position: sticky; top: 0; background: #fff; z-index: 1000;"&gt;
+    &lt;h1&gt;Sticky Header&lt;/h1&gt;
+&lt;/header&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>8. Design a webpage layout where the &lt;nav&gt; contains five navigation links and floats left of a &lt;section&gt;.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>&lt;style&gt;
+    .container {
+        display: flex;
+    }
+    nav {
+        float: left;
+        width: 20%;
+    }
+    section {
+        margin-left: 20%;
+    }
+&lt;/style&gt;
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#link1"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#link2"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#link3"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#link4"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#link5"&gt;Link 5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;section&gt;
+    &lt;h2&gt;Main Content&lt;/h2&gt;
+    &lt;p&gt;This is the main content area.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>9. What is a polyfill script and when is it used in HTML5 development?</h2>
+    </div>
+    <div class="answer">
+        <p>A polyfill script is a piece of code that provides modern functionality on older browsers that do not support it natively. It is used in HTML5 development to ensure compatibility across different browsers.</p>
+    </div>
+
+    <div class="question">
+        <h2>10. Write a page structure using &lt;section&gt; that includes three &lt;article&gt; blocks and a floating &lt;aside&gt;.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>&lt;section&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Article 1&lt;/h2&gt;
+        &lt;p&gt;This is the first article.&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Article 2&lt;/h2&gt;
+        &lt;p&gt;This is the second article.&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Article 3&lt;/h2&gt;
+        &lt;p&gt;This is the third article.&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;aside&gt;
+        &lt;h3&gt;Related Information&lt;/h3&gt;
+        &lt;p&gt;This is some additional content related to the articles.&lt;/p&gt;
+    &lt;/aside&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+    <div class="question">
+        <h2>1. Write HTML code to embed a video using the &lt;video&gt; and &lt;source&gt; tags.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>2. Compare the advantages and disadvantages of hosting videos locally vs externally (e.g., YouTube).</h2>
+    </div>
+    <div class="answer">
+        <p><strong>Advantages of Local Hosting:</strong></p>
+        <ul>
+            <li>Full control over the video content and quality.</li>
+            <li>No dependency on third-party services.</li>
+        </ul>
+        <p><strong>Disadvantages of Local Hosting:</strong></p>
+        <ul>
+            <li>Increased server load and bandwidth usage.</li>
+            <li>Requires more storage space on the server.</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h2>3. Embed a YouTube video in a webpage using an &lt;iframe&gt; and explain the benefits.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+        <p><strong>Benefits:</strong> Easy sharing, built-in player controls, reduced server load, and access to YouTube's vast audience.</p>
+    </div>
+
+    <div class="question">
+        <h2>4. Write code to play an MP3 file using the &lt;audio&gt; tag. Include at least two attributes.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>&lt;audio controls autoplay loop&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio tag.
+&lt;/audio&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>5. What are the file formats supported by &lt;video&gt; tags in major browsers?</h2>
+    </div>
+    <div class="answer">
+        <p>Major browsers support formats like MP4 (H.264), WebM, and Ogg. MP4 is the most widely supported format.</p>
+    </div>
+
+    <div class="question">
+        <h2>6. Explain the role of the type attribute in the &lt;source&gt; tag using an example.</h2>
+    </div>
+    <div class="answer">
+        <p>The <code>type</code> attribute specifies the media type of the resource, helping the browser to choose the correct source.</p>
+        <pre><code>&lt;source src="video.webm" type="video/webm"&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>7. Create a page with a custom video player using HTML5.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>&lt;video id=" customPlayer" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;script&gt;
+    const video = document.getElementById('customPlayer');
+    video.addEventListener('play', () =&gt; { console.log('Video is playing'); });
+    video.addEventListener('pause', () =&gt; { console.log('Video is paused'); });
+&lt;/script&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>8. List four audio attributes with examples and describe their effects.</h2>
+    </div>
+    <div class="answer">
+        <ul>
+            <li><strong>controls</strong>: Displays playback controls.</li>
+            <li><strong>autoplay</strong>: Starts playing the audio automatically.</li>
+            <li><strong>loop</strong>: Repeats the audio when it ends.</li>
+            <li><strong>muted</strong>: Starts the audio muted.</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h2>9. Describe H.264, Ogg Theora, and WebM formats. Which is most widely supported?</h2>
+    </div>
+    <div class="answer">
+        <p><strong>H.264</strong>: A widely used video compression format known for its high quality and efficiency.</p>
+        <p><strong>Ogg Theora</strong>: An open video compression format that is less common but free to use.</p>
+        <p><strong>WebM</strong>: A format designed for the web, providing good quality and efficient compression.</p>
+        <p>H.264 is the most widely supported format across browsers.</p>
+    </div>
+
+    <div class="question">
+        <h2>10. Explain the &lt;object&gt; tag and write code to embed a Flash video using it.</h2>
+    </div>
+    <div class="answer">
+        <p>The &lt;object&gt; tag is used to embed multimedia content such as videos, audio, and Flash files.</p>
+        <pre><code>&lt;object width="640" height="480" data="video.swf"&gt;
+    &lt;param name="autoplay" value="true"&gt;
+    &lt;param name="loop" value="true"&gt;
+    Your browser does not support Flash.
+&lt;/object&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>1. What is Responsive Web Design (RWD)? Why is it important today?</h2>
+    </div>
+    <div class="answer">
+        <p>Responsive Web Design (RWD) is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes. It is important today because it ensures a good user experience across all devices, from desktops to smartphones.</p>
+    </div>
+
+    <div class="question">
+        <h2>2. Write a media query to change font size to 18px when screen width is less than 768px.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>3. Create a CSS grid layout that shows 3 cards per row on desktop, 2 on tablet, and 1 on mobile.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>4. Explain the concept of mobile-first design with an example.</h2>
+    </div>
+    <div class="answer">
+        <p>Mobile-first design is an approach where the design process starts with mobile devices and then scales up to larger screens. This ensures that the essential features are prioritized for mobile users.</p>
+    </div>
+
+    <div class="question">
+        <h2>5. Describe the role of the viewport meta tag in responsive design.</h2>
+    </div>
+    <div class="answer">
+        <p>The viewport meta tag controls the layout on mobile browsers by setting the width and scaling of the viewport. It allows the page to render correctly on different devices.</p>
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>6. Write media queries to change background color for different screen widths:</h2>
+        <ul>
+            <li>Red for &lt; 500px</li>
+            <li>Green for 500–900px</li>
+            <li>Blue for &gt; 900px</li>
+        </ul>
+    </div>
+    <div class="answer">
+        <pre><code>@media (max-width: 500px) {
+    body {
+        background-color: red;
+    }
+}
+@media (min-width: 500px) and (max-width: 900px) {
+    body {
+        background-color: green;
+    }
+}
+@media (min-width: 900px) {
+    body {
+        background-color: blue;
+    }
+}</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>7. What are breakpoints in RWD? Mention three common breakpoints with use.</h2>
+    </div>
+    <div class="answer">
+        <p>Breakpoints are specific screen widths where the layout of a website changes to provide an optimal viewing experience. Common breakpoints include:</p>
+        <ul>
+            <li>320px: Mobile devices</li>
+            <li>768px: Tablets</li>
+            <li>1024px: Desktops</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h2>8. Create a webpage where the layout shifts from side-by-side to stacked on mobile using Flexbox.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>.container {
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>9. How do responsive images work in HTML5? Provide an example.</h2>
+    </div>
+    <div class="answer">
+        <p>Responsive images adjust their size based on the screen size using the <code>srcset</code> attribute or CSS. An example is:</p>
+        <pre><code>&lt;img src="small.jpg" srcset="medium.jpg 768w, large.jpg 1200w" alt="Responsive Image"&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>10. Write a responsive table using overflow-x and media queries.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>.table-container {
+    overflow-x: auto;
+}
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+        display: block;
+    }
+}</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>1. Write a JavaScript function to find the factorial of a number.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>function factorial(n) {
+    if (n === 0) return 1;
+    return n * factorial(n - 1);
+}</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>2. Create a function to highlight all &lt;p&gt; elements when the mouse hovers over any one of them.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>const paragraphs = document.querySelectorAll('p');
+paragraphs.forEach(p =&gt; {
+    p.addEventListener('mouseover', () =&gt; {
+        p.style.backgroundColor = 'yellow';
+    });
+    p.addEventListener('mouseout', () =&gt; {
+        p.style.backgroundColor = '';
+    });
+});</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>3. What are JavaScript events? Explain onclick and onmouseover with code examples.</h2>
+    </div>
+    <div class="answer">
+        <p>JavaScript events are actions that occur in the browser, such as clicks or mouse movements. The <code>onclick</code> event triggers when an element is clicked, while <code>onmouseover</code> triggers when the mouse hovers over an element.</p>
+        <pre><code>&lt;button onclick="alert('Button clicked!')"&gt;Click Me&lt;/button&gt;
+&lt;p onmouseover=" alert('Mouse over paragraph!')"&gt;Hover over this paragraph.&lt;/p&gt;</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>4. Write a JavaScript program to find whether a number is a palindrome.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>function isPalindrome(num) {
+    const str = num.toString();
+    return str === str.split('').reverse().join('');
+}</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>5. What is the role of event.preventDefault() in forms? Explain with a code snippet.</h2>
+    </div>
+    <div class="answer">
+        <p>The <code>event.preventDefault()</code> method prevents the default action of an event from occurring, such as submitting a form. This is useful for validation before submission.</p>
+        <pre><code>document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Validation logic here
+});</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>6. Create a JavaScript program to calculate and display the square root of a number entered by the user.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>const input = prompt('Enter a number:');
+const result = Math.sqrt(input);
+alert('The square root is: ' + result);</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>7. Write a script to validate a form where "Name" and "Email" fields must not be empty.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>document.querySelector('form').addEventListener('submit', function(event) {
+    const name = document.querySelector('#name').value;
+    const email = document.querySelector('#email').value;
+    if (!name || !email) {
+        alert('Name and Email must not be empty!');
+        event.preventDefault();
+    }
+});</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>8. What are JavaScript arrays? Write code to sort and display an array of numbers.</h2>
+    </div>
+    <div class="answer">
+        <p>JavaScript arrays are list-like objects that can hold multiple values. They can be sorted using the <code>sort()</code> method.</p>
+        <pre><code>const numbers = [5, 3, 8, 1];
+numbers.sort((a, b) =&gt; a - b);
+console.log(numbers); // Output: [1, 3, 5, 8]</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>9. Create a function in JavaScript to toggle the display of a hidden &lt;div&gt; on button click.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>function toggleDiv() {
+    const div = document.getElementById('hiddenDiv');
+    div.style.display = div.style.display === 'none' ? 'block' : 'none';
+}</code></pre>
+    </div>
+
+    <div class="question">
+        <h2>10. Write a JavaScript function to dynamically add a new paragraph to a page when a button is clicked.</h2>
+    </div>
+    <div class="answer">
+        <pre><code>function addParagraph() {
+    const newParagraph = document.createElement('p');
+    newParagraph.textContent = 'This is a new paragraph.';
+    document.body.appendChild(newParagraph);
+}</code></pre>
+    </div>
+
+</body>
+</html>
