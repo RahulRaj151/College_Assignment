@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<title>Fashion's Choice Blog</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+  a {
+    color: #e63946;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 1150px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+  .featured-post {
+    position: relative;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .featured-post img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    filter: brightness(0.85);
+    transition: filter 0.3s ease;
+  }
+  .featured-post:hover img {
+    filter: brightness(0.7);
+  }
+  .featured-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    max-width: 60%;
+    background: rgba(0,0,0,0.4);
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+  }
+  .featured-content h2 {
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  .featured-content p {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+  }
+  .featured-content a {
+    color: #f1faee;
+    font-weight: 600;
+    border: 1.5px solid #f1faee;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  .featured-content a:hover {
+    background: #f1faee;
+    color: #1d3557;
+  }
+
+  .main-content {
+    display: flex;
+    gap: 2rem;
+  }
+  .posts-list {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));
+    gap: 1.8rem;
+  }
+  .post-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 12px 18px -9px rgba(0,0,0,0.12);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+  }
+  .post-card:hover {
+    box-shadow: 0 18px 28px -12px rgba(0,0,0,0.25);
+  }
+  .post-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  .post-content {
+    padding: 1rem 1.2rem 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .post-content h3 {
+    margin: 0 0 0.6rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+  .post-content p {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  .post-content a.read-more {
+    align-self: flex-start;
+    font-weight: 600;
+    color: #e63946;
+    border: 1.2px solid #e63946;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  .post-content a.read-more:hover {
+    background: #e63946;
+    color: white;
+  }
+
+  aside.sidebar {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 12px 20px -12px rgba(0,0,0,0.1);
+    height: fit-content;
+  }
+  aside.sidebar h4 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e63946;
+    padding-bottom: 0.3rem;
+  }
+  aside.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  aside.sidebar ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  aside.sidebar ul li:last-child {
+    border-bottom: none;
+  }
+  aside.sidebar ul li a {
+    color: #1d3557;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  aside.sidebar ul li a:hover {
+    color: #e63946;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Header -->
+ <!-- Header -->
+ <header>
+    <div class="logo">
+        <img src="https://img.freepik.com/premium-vector/beauty-hand-drawn-clothing-store-logo-boutique_637057-230.jpg?semt=ais_hybrid&w=740" alt="Fashion Blog Logo">
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="pages/collections.html">Collections</a></li>
+            <li><a href="pages/trends.html">Trends</a></li>
+            <li><a href="Blog.html">Blogs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+</header>
+
+
+<div class="container">
+  <section class="featured-post">
+    <img src="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350&w=700" alt="Featured Fashion Tips" />
+    <div class="featured-content">
+      <h2>10 Fashion Tips to Elevate Your Everyday Look</h2>
+      <p>Discover the hottest style hacks and trendy outfits to keep your look fresh this season.</p>
+      <a href="#">Read More</a>
+    </div>
+  </section>
+
+  <div class="main-content">
+    <section class="posts-list">
+      <article class="post-card">
+        <img src="https://images.pexels.com/photos/1549204/pexels-photo-1549204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160&w=270" alt="Summer Fashion Trends" />
+        <div class="post-content">
+          <h3>Top 5 Summer Fashion Trends in 2024</h3>
+          <p>Beat the heat stylishly with these refreshing summer fashion must-haves.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160&w=270" alt="Accessorizing the Right Way" />
+        <div class="post-content">
+          <h3>Accessorizing: The Secret To Perfect Outfits</h3>
+          <p>Learn how to pick accessories that complement and elevate your look effortlessly.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img src="https://images.pexels.com/photos/2983466/pexels-photo-2983466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160&w=270" alt="Sustainable Fashion Choices" />
+        <div class="post-content">
+          <h3>Making Sustainable Fashion Choices in 2024</h3>
+          <p>Eco-friendly brands and tips to bring sustainability to your wardrobe.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160&w=270" alt="Men’s Formal Wear Guide" />
+        <div class="post-content">
+          <h3>Ultimate Guide To Men’s Formal Wear</h3>
+          <p>Step up your business attire with these classic and modern formal wear ideas.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160&w=270" alt="Wardrobe Essentials For Women" />
+        <div class="post-content">
+          <h3>Wardrobe Essentials Every Woman Should Own</h3>
+          <p>Build a versatile and chic wardrobe with these must-have pieces.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img src="https://images.pexels.com/photos/2983468/pexels-photo-2983468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160&w=270" alt="Footwear Trends" />
+        <div class="post-content">
+          <h3>Footwear Trends to Watch This Year</h3>
+          <p>Step out in style with the latest trends in casual and formal footwear.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </article>
+    </section>
+
+    <aside class="sidebar">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#">Fashion Tips</a></li>
+        <li><a href="#">Style Guides</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Men's Wear</a></li>
+        <li><a href="#">Women's Wear</a></li>
+        <li><a href="#">Footwear</a></li>
+        <li><a href="#">Accessories</a></li>
+      </ul>
+      <h4>Recent Posts</h4>
+      <ul>
+        <li><a href="#">How to Style a Little Black Dress</a></li>
+        <li><a href="#">Top 10 Summer Hats to Try</a></li>
+        <li><a href="#">Minimalist Jewelry Trends 2024</a></li>
+        <li><a href="#">Color Combinations for Every Season</a></li>
+      </ul>
+    </aside>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Your ultimate destination for fashion trends and style inspiration.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="pages/privacy-policy.html" style="color: white;">Privacy Policy</a></li>
+                <li><a href="pages/terms.html" style="color: white;">Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Fashion Blog. All rights reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
+
