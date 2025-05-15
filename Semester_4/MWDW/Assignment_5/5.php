@@ -6,7 +6,7 @@ function isLeapYear($year) {
     return false;
 }
 
-$year = 2024; // Example year
+$year = 2024; 
 
 if (isLeapYear($year)) {
     echo "$year is a leap year";
