@@ -10,6 +10,6 @@ function convertDays($total_days) {
     echo "$years years, $months months, and $days days";
 }
 
-$total_days = 756; // Example number of days
+$total_days = 756; 
 convertDays($total_days);
 ?>
