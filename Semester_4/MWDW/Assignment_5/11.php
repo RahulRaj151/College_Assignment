@@ -1,22 +1,18 @@
 <?php
-echo "<table border='1' style='border-collapse: collapse'>";
+// Display heading
+echo "Multiplication Table (1 to 10)\n\n";
 
-// Header row
-echo "<tr><th>&nbsp;</th>";
+// Outer loop for rows (1 to 10)
 for ($i = 1; $i <= 10; $i++) {
-    echo "<th>$i</th>";
-}
-echo "</tr>";
-
-// Multiplication table
-for ($i = 1; $i <= 10; $i++) {
-    echo "<tr>";
-    echo "<th>$i</th>";
+    
+    // Inner loop for columns (1 to 10)
     for ($j = 1; $j <= 10; $j++) {
-        echo "<td>" . ($i * $j) . "</td>";
+        $product = $i * $j;
+        // Print the product with padding for alignment
+        echo str_pad($product, 4, " ", STR_PAD_LEFT);
     }
-    echo "</tr>";
+    
+    // Move to the next line after each row
+    echo "\n";
 }
-
-echo "</table>";
 ?>
