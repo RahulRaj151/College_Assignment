@@ -1,37 +1,24 @@
-
-let prize = prompt("Select a number between 0 and 10:");
-
-let prizeNum = Number(prize);
-
-let outputMessage = "My Selection: ";
-
-let prizeString = "";
-
-switch (prizeNum) {
-    case 0:
-    case 1:
-        prizeString = "You won a candy bar!";
-        break;
-    case 2:
-    case 3:
-        prizeString = "You won a small toy!";
-        break;
-    case 4:
-    case 5:
-        prizeString = "You won a book!";
-        break;
-    case 6:
-    case 7:
-        prizeString = "You won a gift card!";
-        break;
-    case 8:
-    case 9:
-        prizeString = "You won a gadget!";
-        break;
-    case 10:
-        prizeString = "You won the grand prize!";
-        break;
-    default:
-        prizeString = "Invalid selection, no prize.";
+function studentResult(name, mark1, mark2, mark3) {
+    const total = mark1 + mark2 + mark3;
+    const avg = total / 3;
+    let grade;
+    if (avg >= 90) {
+        grade = 'A';
+    } else if (avg >= 80) {
+        grade = 'B';
+    } else if (avg >= 70) {
+        grade = 'C';
+    } else if (avg >= 60) {
+        grade = 'D';
+    } else {
+        grade = 'F';
+    }
+    return {
+        name: name,
+        total: total,
+        avg: avg,
+        grade: grade
+    };
 }
-console.log(outputMessage + prizeString);
+
+console.log(studentResult('John', 95, 88, 92));
