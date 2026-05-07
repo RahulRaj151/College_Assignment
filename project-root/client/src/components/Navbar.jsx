@@ -1,0 +1,1 @@
+export default function Navbar(){const user=JSON.parse(localStorage.getItem('user')||'{}');return <header className='glass p-4 mb-5 flex justify-between items-center'><h1 className='text-xl font-bold'>🔐 Secure Password Manager</h1><div className='text-sm text-slate-200'>{user.username||'Guest'}</div></header>;}

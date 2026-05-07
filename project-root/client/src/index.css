@@ -1,0 +1,5 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-slate-950 text-slate-100;} .glass{@apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl;}
+.input{@apply w-full rounded-lg bg-slate-900/80 border border-slate-700 px-3 py-2 text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500;}
+.btn{@apply px-4 py-2 rounded-lg font-medium transition hover:scale-[1.02];}
+.btn-primary{@apply btn bg-indigo-600 hover:bg-indigo-500;} .btn-danger{@apply btn bg-rose-600 hover:bg-rose-500;} .btn-secondary{@apply btn bg-slate-700 hover:bg-slate-600;}

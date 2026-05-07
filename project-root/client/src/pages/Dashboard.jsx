@@ -1,0 +1,2 @@
+import Navbar from '../components/Navbar';import Sidebar from '../components/Sidebar';
+export default function Dashboard(){return <main className='p-4 md:p-8'><Navbar/><div className='grid md:grid-cols-[220px_1fr] gap-4'><Sidebar/><section className='glass p-6'><h2 className='text-3xl font-bold'>Dashboard</h2><p className='text-slate-300 mt-2'>Manage your credentials securely with JWT-protected APIs, search, copy, and modern responsive UI.</p></section></div></main>}

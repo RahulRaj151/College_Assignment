@@ -1,0 +1,3 @@
+import { Link, useLocation } from 'react-router-dom';
+const links=[['/dashboard','Dashboard'],['/add-password','Add Password'],['/view-passwords','View Passwords'],['/student-form','Student Form'],['/aggregation','Aggregation']];
+export default function Sidebar(){const {pathname}=useLocation();return <aside className='glass p-4 space-y-2 h-fit'>{links.map(([to,label])=><Link key={to} to={to} className={`block p-2 rounded ${pathname===to?'bg-indigo-600':'hover:bg-slate-700'}`}>{label}</Link>)}<button className='btn-danger w-full mt-3' onClick={()=>{localStorage.clear();location.href='/login';}}>Logout</button></aside>;}

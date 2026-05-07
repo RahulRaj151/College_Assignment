@@ -1,0 +1,6 @@
+import { useEffect, useState } from 'react';import Navbar from '../components/Navbar';import Sidebar from '../components/Sidebar';import api from '../services/api';
+export default function AggregationDashboard(){const [d,setD]=useState({groupedCounts:[],sortedProjected:[]});useEffect(()=>{api.get('/students/aggregation').then(r=>setD(r.data));},[]);
+return <main className='p-4 md:p-8'><Navbar/><div className='grid md:grid-cols-[220px_1fr] gap-4'><Sidebar/><section className='space-y-4'>
+<div className='glass p-4'><h3 className='text-xl font-bold mb-2'>Grouped Counts by Marks Range</h3><div className='grid md:grid-cols-3 gap-3'>{d.groupedCounts.map(g=><div key={g._id} className='bg-slate-900/60 p-3 rounded-lg'><p className='text-slate-300'>Range</p><p className='text-lg font-semibold'>{g._id}</p><p className='text-indigo-300'>Count: {g.count}</p></div>)}</div></div>
+<div className='glass p-4 overflow-x-auto'><h3 className='text-xl font-bold mb-2'>Sorted & Projected Students</h3><table className='w-full text-left'><thead><tr><th>Name</th><th>Marks</th></tr></thead><tbody>{d.sortedProjected.map((s,i)=><tr key={i} className='border-t border-slate-700'><td>{s.name}</td><td>{s.marks}</td></tr>)}</tbody></table></div>
+</section></div></main>}
