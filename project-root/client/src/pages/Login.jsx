@@ -1,0 +1,4 @@
+import { useState } from 'react';import { useNavigate } from 'react-router-dom';import api from '../services/api';
+export default function Login(){const nav=useNavigate();const [email,setEmail]=useState('');const [masterPassword,setMaster]=useState('');const[msg,setMsg]=useState('');
+const submit=async e=>{e.preventDefault();try{const r=await api.post('/login',{email,masterPassword});localStorage.setItem('auth',JSON.stringify(r.data));setMsg('Login success');nav('/dashboard');}catch(err){setMsg(err.response?.data?.message||'Login failed');}};
+return <form className='card' onSubmit={submit}><h3>Login</h3><input value={email} onChange={e=>setEmail(e.target.value)} placeholder='email' required/><input type='password' value={masterPassword} onChange={e=>setMaster(e.target.value)} placeholder='master password' required/><button>Login</button><p>{msg}</p></form>}
