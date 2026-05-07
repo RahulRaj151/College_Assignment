@@ -1,4 +1,61 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
+
 import ProtectedRoute from './components/ProtectedRoute';
-import Login from './pages/Login';import Register from './pages/Register';import Dashboard from './pages/Dashboard';import AddPassword from './pages/AddPassword';import ViewPasswords from './pages/ViewPasswords';import UserRegistrationForm from './pages/UserRegistrationForm';import AggregationDashboard from './pages/AggregationDashboard';
-export default function App(){return <Routes><Route path='/' element={<Navigate to='/login'/>}/><Route path='/login' element={<Login/>}/><Route path='/register' element={<Register/>}/><Route path='/dashboard' element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/><Route path='/add-password' element={<ProtectedRoute><AddPassword/></ProtectedRoute>}/><Route path='/view-passwords' element={<ProtectedRoute><ViewPasswords/></ProtectedRoute>}/><Route path='/student-form' element={<ProtectedRoute><UserRegistrationForm/></ProtectedRoute>}/><Route path='/aggregation' element={<ProtectedRoute><AggregationDashboard/></ProtectedRoute>}/></Routes>;}
+import AddPassword from './pages/AddPassword';
+import AggregationDashboard from './pages/AggregationDashboard';
+import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import UserRegistrationForm from './pages/UserRegistrationForm';
+import ViewPasswords from './pages/ViewPasswords';
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path='/' element={<Navigate to='/login' replace />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
+
+      <Route
+        path='/dashboard'
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path='/add-password'
+        element={
+          <ProtectedRoute>
+            <AddPassword />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path='/view-passwords'
+        element={
+          <ProtectedRoute>
+            <ViewPasswords />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path='/student-form'
+        element={
+          <ProtectedRoute>
+            <UserRegistrationForm />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path='/aggregation'
+        element={
+          <ProtectedRoute>
+            <AggregationDashboard />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  );
+}
